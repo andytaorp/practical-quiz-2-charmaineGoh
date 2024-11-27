@@ -7,15 +7,12 @@ export default function Form({ onAddTask }) {
     e.preventDefault();
     if (description.trim()) {
       const newTask = {
-        id: Date.now(),
         description,
-        completed: false, 
       };
       onAddTask(newTask);
       setDescription(""); 
     }
   };
-  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -29,4 +26,5 @@ export default function Form({ onAddTask }) {
     </form>
   );
 }
+
 

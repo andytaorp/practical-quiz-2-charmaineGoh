@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <h1>Task Tracker</h1>
-      <Form onAddTask={handleAddTask} />
+      <Form tasks={tasks} onAddTask={handleAddTask} />
       <TaskList
         tasks={tasks}
         onToggleTask={handleToggleTask}

@@ -5,13 +5,13 @@ export default function Form({ onAddTask }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (description) {
+
       const newTask = {
         description,
       };
       onAddTask(newTask);
       setDescription(""); 
-    }
+  
   };
 
   return (

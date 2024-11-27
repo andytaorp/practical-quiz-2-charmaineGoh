@@ -26,7 +26,6 @@ function App() {
       <h1>Task Tracker</h1>
       <Form tasks={tasks} onAddTask={handleAddTask} />
       <TaskList
-        tasks={tasks}
         onToggleTask={handleToggleTask}
         onDeleteTask={handleDeleteTask}
       />

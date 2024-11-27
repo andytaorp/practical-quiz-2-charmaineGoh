@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 function Task({ task, onToggleTask, onDeleteTask }) {
   return (
     <li>
@@ -19,4 +17,5 @@ function Task({ task, onToggleTask, onDeleteTask }) {
 }
 
 export default Task;
+
 

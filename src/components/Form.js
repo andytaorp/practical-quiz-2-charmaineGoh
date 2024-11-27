@@ -6,10 +6,16 @@ export default function Form({ onAddTask }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (description.trim()) {
-      onAddTask(description);
-      setDescription("");
+      const newTask = {
+        id: Date.now(),
+        description,
+        completed: false, 
+      };
+      onAddTask(newTask);
+      setDescription(""); 
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit}>

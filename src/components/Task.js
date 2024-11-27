@@ -9,8 +9,9 @@ function Task({ task, onToggleTask, onDeleteTask }) {
         onChange={() => onToggleTask(task.id)}
       />
       <span style={{ textDecoration: task.completed ? "line-through" : "none" }}>
-        {task.description}
+        
       </span>
+      {task.description}
       <button onClick={() => onDeleteTask(task.id)}>Delete</button>
     </li>
   );

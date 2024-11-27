@@ -6,7 +6,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   const handleAddTask = (newTask) => {
-    setTasks((prevTasks) => [...prevTasks, newTask]);
+    setTasks((prevTask) => [...prevTask, newTask]);
   };
 
   const handleToggleTask = (id,onToggleTask) => {
@@ -26,6 +26,7 @@ function App() {
       <h1>Task Tracker</h1>
       <Form tasks={tasks} onAddTask={handleAddTask} />
       <TaskList
+        tasks={tasks}
         onToggleTask={handleToggleTask}
         onDeleteTask={handleDeleteTask}
       />

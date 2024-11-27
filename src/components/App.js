@@ -9,10 +9,10 @@ function App() {
     setTasks((prevTasks) => [...prevTasks, newTask]);
   };
 
-  const handleToggleTask = (id) => {
+  const handleToggleTask = (id,onToggleTask) => {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
+        task.id === id ? onToggleTask : task
       )
     );
   };
